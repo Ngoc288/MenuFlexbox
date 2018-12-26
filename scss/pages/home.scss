@@ -1,0 +1,202 @@
+@media all and (min-width:601px)
+{
+    .header
+{
+    display: flex;
+    height: 500px;
+    justify-content: flex-end;
+    width: 1140px;
+    margin: 0 auto;
+    .header-menu
+    {
+        width: 85%;
+        height: 120px;
+        .header-menu-logo
+        {
+            height: 60px;
+            line-height: 60px;  
+            border-bottom: 1px solid gray;
+            .menu-logo-left
+            {
+                width: 50%;
+                float:left;
+                height: 100%;
+                p
+                {
+                    font-size: 12px;
+                }
+                i
+                {
+                    display: none;
+                }
+            }
+            .menu-logo-right
+            {
+                display:flex;
+                justify-content: flex-end;
+                .icon-search-search
+                {
+                    display: none;
+                }
+                i
+                {
+                    line-height: 60px;
+                    padding-left: 7px;
+                    color: black;
+                }
+            }
+        }
+        .header-menu-menu
+        {
+            height: 60px;
+            .menu-logo-right
+            {
+                display: none;
+            }
+            #btnClose
+            {
+                display: none;
+            }
+            ul
+            {
+                padding-top: 20px;
+                display: flex;
+                a
+                {
+                    text-decoration: none;
+                    .Menu1
+                    {
+                        
+                        list-style: none;
+                        color: black;
+                        font-weight: 700;
+                        padding:5px 12px;
+
+                        &:hover
+                        {
+                            border-bottom: 3px solid #0EA50B;
+                        }
+                    }
+                    .home
+                    {
+                        border-bottom: 3px solid #0EA50B;
+                    }
+                    .icon
+                    {
+                        &:hover
+                        {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+}
+@media (max-width:600px)
+{
+   .header
+   {
+       width: 100%;
+       .header-menu
+       {
+        .header-menu-logo
+        { 
+            height: 50px;
+            background: #0EA50B;
+            width: 100%;
+            .menu-logo-left
+            {
+                width: 50%;
+                p
+                {
+                    display: none;
+                }
+                .icon-bars
+                {
+                    padding: 9px 5px;
+                    display: flex;
+                    justify-content: flex-start;
+                    font-size: 30px;
+                    color: white;
+                }
+
+            }
+            .menu-logo-right
+            {
+                display: none;
+            }
+        }
+        .clearfix{
+            clear: both;
+        }
+        .hide {
+            display: none;
+        }
+        .header-menu-menu
+        {
+            background-image: linear-gradient(to bottom,#0EA50B, #B83B43);
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            opacity: 0.8;
+            #btnClose
+            {
+               float: right;
+               background: #0EA50B;
+               border: none;
+               margin: 12px;
+               color: white;
+               font-size: 20px;
+            }
+            .menu-logo-right
+            {
+                padding: 10px 20px;
+                padding-right: 15px;
+                font-size: 18px;
+                i
+                {
+                    color: white;
+                    padding: 10px 20px;
+                }
+            }
+           ul
+           {
+            min-height: 561px!important;
+            display: flex;
+            flex-flow: column wrap;
+            padding-top: 5px;
+            a
+            {
+                text-decoration: none;
+                .Menu1
+                {
+                    color: white;
+                    display: block;
+                    border-bottom: none;
+                    font-weight: 600;
+                    padding: 15px 5px;
+                    &:hover
+                    {
+                        color: white!important;
+                        border-bottom: none;
+                        background: rgb(46, 218, 248);
+                        width: 90%;
+                        height: 54px;
+                        opacity: 0.8;
+                        border-radius: 0.4;
+
+                    }
+                }
+                .icon
+                {
+                    display: none;
+                }
+            }
+           }
+        }
+       }
+   }
+}

@@ -1,0 +1,180 @@
+
+.features {
+	position: relative;
+	//	background: url(../img/features-bg.jpg);
+	@include pb(170);
+
+	h2 {
+
+	}
+	.features__content {
+		//display: flex;
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		display: flex;
+
+		.left {
+			z-index: 1;
+			background: url(../../img/left-planet.png) no-repeat right center;
+			float: left;
+			width: 33.33333%;
+			min-height: 910px;
+			//width: 675px;
+			//height: 910px;
+			@include r(1630) {
+				//width: 750px;
+				//width: 75rem;
+			}
+			@include r(1480) {
+				//height: 800px;
+				//height: 80rem;
+
+				//
+				@include rh(700) {
+
+				}
+			}
+			@include r(980) {
+				display: none;
+			}
+		}
+		.right {
+			width: 66.66666%;
+			float: left;
+			position: relative;
+			z-index: 2;
+
+			@include r(980) {
+				width: 100%;
+				float: none;
+			}
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			//width: 1025px;
+			//width: 102.5rem;
+			//@include ml(100);
+			@include r(1630) {
+				//margin-left: 0;
+			}
+			@include r(1480) {
+				//width: 1300px;
+				//width: 130rem;
+				//@include ml(30);
+			}
+
+			//display: flex;
+			//align-items: center;
+			//align-content: center;
+			//@include pt(120);
+			//@include pb(80);
+			//@include r(1480) {
+			//	@include pt(100);
+			//	@include pb(100);
+			//}
+			//@include r(1400) {
+			//	@include pt(70);
+			//	@include pb(130);
+			//}
+			//@include r(1400) {
+			//	@include pt(50);
+			//	@include pb(160);
+			//}
+			//@include r($M-) {
+			//	@include pt(120);
+			//	@include pb(0);
+			//}
+			.blocks {
+				//@include mr(40);
+				//display: flex;
+				//flex-wrap: wrap;
+				//height: 100%;
+				//align-content: space-around;
+				//justify-content: space-between;
+				padding-left: 100px;
+				padding-top: 200px;
+				@include r(1024) {
+					padding-top: 250px;
+				}
+				@include r(980) {
+					padding-top: 100px;
+					padding-left: 40px;
+				}
+
+				@include r(767) {
+					padding-top: 100px;
+					padding-left: 20px;
+				}
+				.content-block {
+					//display: flex;
+					//width: 45%;
+					float: left;
+					width: 50%;
+					padding: 0 40px 0 0;
+					margin-bottom: 150px;
+
+					&:nth-child(2n+1) {
+						clear: both;
+					}
+					@include r(1500) {
+						margin-bottom: 120px;
+					}
+					@include r(1630) {
+						//align-items: center;
+					}
+					@include r($L-) {
+						//align-items: flex-start;
+					}
+					@include r($M-) {
+						//@include mb(40);
+					}
+					@include r(650) {
+						//width: 100%;
+						//margin-bottom: 60px;
+						//align-items: center;
+						//justify-content: space-between;
+					}
+					@include r(767) {
+						float: none;
+						margin-bottom: 50px;
+						padding: 0 20px 0 0;
+						width: 100%;
+					}
+					.img {
+						float: left;
+						width: 100px;
+						@include r(1600) {
+
+						}
+						img {
+							display: block;
+							margin-top: -15px;
+						}
+					}
+					.text {
+						padding-left: 100px;
+						@include r(1600) {
+
+						}
+						h6 {
+							@include fz(18);
+							@include lh(20);
+							@include mb(20);
+							@include r($M-) {
+								font-size: 14px;
+								line-height: 16px;
+							}
+						}
+						p {
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,306 @@
+#sidebar {
+	width: 100%;
+	max-width: 400px;
+	background: $dash-blue-m;
+    height: 100%;
+  
+	min-height: 360px;
+	position: fixed;
+	top: 77px;
+	left: 0;
+	transform: translateX(-100%);
+	z-index: 3;
+	@include tr();
+	overflow: auto;
+	padding-bottom: 130px;
+	&.menu-open {
+		transform: translateX(0);
+		@include tr(.6s);
+		.bottom-links {
+			position: static;
+		}
+	}
+	.bottom-links {
+		padding: 0 40px;
+	}
+	.menu {
+		padding: 0;
+		margin: 40px 0;
+		li {
+            
+			&.active {
+				label {
+					background: $dash-blue-d;
+					&.dashboard-item {
+						&::before {
+							background: url("../../img/menu/dashboard_active.png") no-repeat;
+						}
+					}
+					&.setting-item {
+						&::before {
+							background: url("../../img/menu/settings_active.png") no-repeat;
+						}
+					}
+					&.network-item {
+						&::before {
+							background: url("../../img/menu/network_active.png") no-repeat;
+						}
+					}
+					&.wallet-item {
+						&::before {
+							background: url("../../img/menu/wallet_active.png") no-repeat;
+						}
+					}
+					&.investment-item {
+						&::before {
+							background: url("../../img/menu/investment_active.png") no-repeat;
+						}
+					}
+					&.earning-item {
+						&::before {
+							background: url("../../img/menu/earningreport_active.png") no-repeat;
+						}
+					}
+					&.game-item {
+						&::before {
+							background: url("../../img/menu/game_active.png") no-repeat;
+						}
+					}
+				}
+			}
+			label {
+                font-weight: bold;
+				display: block;
+				font-size: 13px;
+				line-height: 30px;
+				color: $w;
+				text-decoration: none;
+				padding: 11px 10px 11px 60px;
+				position: relative;
+				@include tr();
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 30px;
+					width: 17px;
+					height: 17px;
+					background: url("../../img/menu/dashboard.png") no-repeat;
+					background-size: 75px 175px;
+				}
+				&.dashboard-item {
+					&::before {
+						background: url("../../img/menu/dashboard.png") no-repeat;
+					}
+				}
+				&.setting-item {
+					&::before {
+						background: url("../../img/menu/setting.png") no-repeat;
+					}
+				}
+				&.network-item {
+					&::before {
+						background: url("../../img/menu/network.png") no-repeat;
+						// background-position: -47px -56px;
+					}
+				}
+				&.wallet-item {
+					&::before {
+						background: url("../../img/menu/wallet.png") no-repeat;
+						// background-position: -47px -103px;
+					}
+				}
+				&.investment-item {
+					&::before {
+						background: url("../../img/menu/investment.png") no-repeat;
+						// background-position: -47px -150px;
+					}
+				}
+				&.earning-item {
+					&::before {
+						background: url("../../img/menu/earningreport.png") no-repeat;
+						// background-position: -47px -150px;
+					}
+				}
+				&.game-item {
+					&::before {
+						background: url("../../img/menu/game.png") no-repeat;
+						// background-position: -47px -150px;
+					}
+				}
+				&:hover {
+					background: $dash-blue-d;
+					&.dashboard-item {
+						&::before {
+							background: url("../../img/menu/dashboard_active.png") no-repeat;
+						}
+					}
+					&.setting-item {
+						&::before {
+							background: url("../../img/menu/settings_active.png") no-repeat;
+						}
+					}
+					&.network-item {
+						&::before {
+							background: url("../../img/menu/network_active.png") no-repeat;
+						}
+					}
+					&.wallet-item {
+						&::before {
+							background: url("../../img/menu/wallet_active.png") no-repeat;
+						}
+					}
+					&.investment-item {
+						&::before {
+							background: url("../../img/menu/investment_active.png") no-repeat;
+						}
+					}
+					&.earning-item {
+						&::before {
+							background: url("../../img/menu/earningreport_active.png") no-repeat;
+						}
+					}
+					&.game-item {
+						&::before {
+							background: url("../../img/menu/game_active.png") no-repeat;
+						}
+					}
+				}
+            }
+        
+			ul{
+				li{
+					&.active{
+     					background: rgba(0, 0, 0, 0.3)
+					}
+				}
+			}
+		}
+
+
+	}
+	@include m($S) {
+		top: 82px;
+		.menu {
+			margin: 50px 0;
+			li {
+				a {
+					line-height: 35px;
+				}
+			}
+		}
+	}
+	@include m($M) {
+		top: 82px;
+		height: calc(100% - 82px);
+		width: 225px;
+		max-width: none;
+		left: 0;
+		transform: translateX(0);
+		.menu {
+			margin: 50px 0 0;
+			li {
+				a {
+					line-height: 22px;
+				}
+			}
+		}
+		.bottom-links {
+			text-align: center;
+			position: fixed;
+			width: 225px;
+			bottom: 0;
+			left: 0;
+			padding: 0;
+			.token-sale-terms {
+				padding: 13px 15px;
+			}
+		}
+		.menu {
+			padding: 0;
+			margin: 50px 0 0;
+			li {
+				a {
+                    font-weight: 200;
+					padding: 11px 10px 11px 60px;
+					&::before {
+						left: 15px;
+					}
+				}
+			}
+		}
+	}
+	@include m($L) {
+		top: 84px;
+		height: calc(100% - 84px);
+		.menu {
+			padding: 0;
+			margin:0;
+			li {
+				a {
+					padding: 11px 10px 11px 50px;
+					&::before {
+						left: 15px;
+					}
+				}
+			}
+		}
+	}
+	@include m($XL) {
+		top: 100px;
+		height: calc(100% - 100px);
+		width: 275px;
+		left: 0;
+		.bottom-links {
+			width: 275px;
+			.token-sale-terms {
+				padding: 13px 15px;
+			}
+		}
+		.menu {
+			padding: 0;
+			margin: 50px 0 0;
+			li {
+				a {
+                    color: white;
+					padding: 11px 10px 11px 60px;
+					&::before {
+						left: 40px;
+                    }
+                    
+                }
+                a.parent{
+                    font-weight: bold;
+                    color:white;
+                    padding: 11px 10px 11px 0px;
+                }
+			}
+		}
+    }
+    ul li a.parent{
+        font-weight: bold;
+        color:white;
+        padding: 11px 10px 11px 0px;
+    }
+    label.parent{
+        font-weight: bold;
+    }
+    .submenu{
+        li{
+            margin-left: 0px;
+        }
+        a{
+            font-size: 12px;
+        }
+    }
+}
+::-webkit-scrollbar{
+    width:0px;
+}
+@media only screen and (max-width: 767px) {
+.submenu{
+    margin-left: 45px;
+}
+}

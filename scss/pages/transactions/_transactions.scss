@@ -1,0 +1,190 @@
+
+.section-coin{
+    padding: 0;
+    overflow-x: auto;
+}
+.referral{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+    .referral-lbl{
+        color: #fff;
+    }
+    .form{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        .referral-form{
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            color: #fff;
+            margin: 2rem 0;
+            align-items: center;
+            .referral-form--input{
+                display: block;
+                -moz-appearance: none;
+                background: #374769;
+                border: none;
+                height: 40px;
+                color: #6ca5ed;
+                width: 6rem;
+                margin: 0 0.2rem;
+                padding-left: 0.5rem;
+            }
+            .left{
+                border-radius: 3rem 0 0 3rem;
+            }
+            .center{
+                width: 14rem;
+                border-radius: 0rem;
+            }
+            .right{
+                border-radius: 0 3rem 3rem 0;
+            }
+            .form-lbl{
+                margin-right: 2rem;
+                &::after{
+                    display: none;
+                }
+            }
+            .to{
+                margin-left: 2rem;
+            }
+            label{
+                padding: 0rem;
+            }
+            
+        }
+    }
+    .status{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        .referral-form--input{
+            background: #374769 !important;
+            color: #6ca5ed;
+            height: 40px;
+            width: auto;
+            margin-right: 2rem;
+        }
+        .btn-colorful-wrap{
+            text-align: center;
+            margin: 0;
+            .btn-colorful{
+                border: none;
+                padding: 0 3rem;
+                line-height: 4rem;
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+        }
+    }
+    
+    
+}
+
+
+
+.transactions_table{
+    width: 100%;
+    min-width: 840px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: #192135;  
+    th{ 
+        width: 11%;
+        text-align: left;
+        padding: 10px 24px;
+        font-size: 1.4rem; 
+        line-height: 20px;
+        font-weight: 600;
+        color: #FFF;
+        border-bottom: 1px solid #192e46;
+    }
+    td{
+        // width: 11%;
+        padding: 16px 24px;
+        font-size: 12px; 
+        line-height: 18px; 
+        font-weight: 400;
+        color: #70abf5;
+        border-bottom: 1px solid #192e46;
+        img{
+            width: 2.5rem;
+            // display: block;
+        }
+        // input{
+        //     display: block;
+        //     margin-right: 0;
+        //     padding: 10px 5px 10px 5px; 
+        //     font-size: 14px;
+        //     line-height: 15px;
+        //     font-weight: 500;
+        //     color: #dbebff;
+        //     background: #252846;
+        //     border-radius: 25px;
+        //     border: none;
+        //     outline: none;
+        // } 
+    }
+    .active{
+        padding: 16px 0px !important;
+    }
+  
+}
+
+@media only screen and (max-width: 1287px){
+    .referral .form{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px){
+
+    .referral .form .referral-form .to{
+        margin-right: 4rem;
+        margin-left: 0rem;
+    }
+    
+    
+}
+@media only screen and (max-width: 570px){
+    select{
+        -moz-appearance: none;
+        -webkit-appearance: none;
+    }
+    .referral .form .referral-form{
+        width: 100%;
+    }
+    .referral .status{
+        margin: 2rem auto;
+    }
+}
+@media only screen and (max-width: 414px){
+    .referral .form .referral-form .center{
+        width: 27rem;
+    }
+}
+@media only screen and (max-width: 375px){
+    .referral .form .referral-form .center{
+        width: 22rem;
+    }
+    .referral .status .referral-form--input{
+        margin-left: 4rem;
+    }
+}
+@media only screen and (max-width: 360px){
+    .referral .form .referral-form .center{
+        width: 21rem;
+    }
+}
+@media only screen and (max-width: 320px){
+    .referral .form .referral-form .center{
+        width: 16rem;
+    }
+    select{
+        padding: 10px;
+    }
+}
